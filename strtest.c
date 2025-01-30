@@ -27,7 +27,7 @@ static void print_str_stats(const char * str) {
     for(const char * c = str, * n;; c = n) {
         utf32_t i = mchar(c, &n);
         if(i == '\0') break;
-        printf("%*sU+%05x ", (unsigned int)(tabwidth - strlen("U+00000")), "", (uint_least32_t) i);
+        printf("%*sU+%06x ", (unsigned int)(tabwidth - strlen("U+000000")), "", (uint_least32_t) i);
     }
     printf("\n");
     
